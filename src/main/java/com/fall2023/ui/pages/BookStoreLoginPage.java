@@ -65,7 +65,6 @@ public class BookStoreLoginPage {
                 return this;
         }
 
-
         public BookStoreLoginPage clickOnCaptcha(WebDriver driver) {
 
                 WebElement iframe = driver.findElement(By.cssSelector("iframe[src*='recaptcha']"));

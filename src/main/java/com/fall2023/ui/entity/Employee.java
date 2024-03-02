@@ -11,8 +11,8 @@ import java.util.List;
 
 @AllArgsConstructor //конструктор со всеми свойствами
 @NoArgsConstructor  //конструктор по умолчанию
-@Getter
-@Setter
+@Getter//получит
+@Setter// изменять
 @EqualsAndHashCode
 @ToString
 public class Employee {

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/nurzatzarylbekova/Desktop/SeleniumFall23"><classes>
+        <class name="com.fall2023.demoqa.ByClassName"><methods><include name="byClassNameTest"/></methods>
+        </class><class name="com.fall2023.demoqa.ByClassNameDemo"><methods><include name="ByClassNameSite"/>
+    </methods></class><class name="com.fall2023.demoqa.ByID"><methods><include name="byIdTest"/></methods></class>
+        <class name="com.fall2023.demoqa.ByXpathDemo"><methods><include name="demo"/></methods></class>
+        <class name="com.fall2023.demoqa.CssSelectorDemo"><methods><include name="demo123"/></methods>
+        </class><class name="com.fall2023.demoqa.HWLinkedTextTest"><methods><include name="test1"/>
+        <include name="test2"/>
+        <include name="test3"/>
+        <include name="test4"/>
+        <include name="test5"/>
+        <include name="test6"/>
+    </methods>
+    </class><class name="com.fall2023.demoqa.HWOrangeHRML">
+        <methods>
+            <include name="loginWithValidUsernameAndValidPasswordTest"/>
+            <include name="loginWithInValidUsernameAndValidPasswordTest"/><include name="PerformanceTest"/>
+            <include name="loginWithValidUsernameAndValidPasswordTest1"/><include name="Search"/></methods>
+    </class><class name="com.fall2023.demoqa.HWbyClassName">
+        <methods><include name="byClassTextBox"/>
+        <include name="byClassFullName"/>
+        <include name="byClassCheckBox"/></methods></class>
+        <class name="com.fall2023.demoqa.HWbyID"><methods><include name="test1"/></methods>
+        </class><class name="com.fall2023.demoqa.HWpartialLinkTexsTest"><methods><include name="partialLinc1"/>
+        <include name="partialLinc2"/><include name="partialLinc3"/><include name="partialLinc4"/>
+        <include name="partialLinc5"/>
+        <include name="partialLinc6"/>
+        <include name="partialLinc7"/><include name="partialLinc8"/>
+    </methods></class><class name="com.fall2023.demoqa.LinkedTextTest"><methods><include name="test123"/></methods></class><class name="com.fall2023.demoqa.MouseInteractions.AdvancedMouseInteractions"><methods><include name="doubleClickTest"/><include name="rightClickTest"/><include name="ClickMe"/></methods></class><class name="com.fall2023.demoqa.NambafoodLogin"><methods><include name="signUp"/></methods></class><class name="com.fall2023.demoqa.OrangeHRMLogin"><methods><include name="loginWithValidUsernameAndValidPasswordTest"/><include name="loginWithInValidUsernameAndValidPasswordTest"/><include name="loginWithInValidUsernameAndValidPasswordTesst"/><include name="PerformanceTest"/><include name="loginWithValidUsernameAndValidPasswordTest1"/><include name="Search"/></methods></class><class name="com.fall2023.demoqa.PartialLinkTextTest"><methods><include name="demo"/></methods></class><class name="com.fall2023.demoqa.Xpath.Buttons"><methods><include name="doubleClick"/><include name="rightClickMe"/><include name="ClickMe"/></methods></class><class name="com.fall2023.demoqa.Xpath.Download"><methods><include name="downloadTest"/></methods></class><class name="com.fall2023.demoqa.Xpath.HWCheckBox"><methods><include name="checkBoxTest"/></methods></class><class name="com.fall2023.demoqa.waits.ExplicitWaitExample"><methods><include name="waitForElementToBeClickAble"/></methods></class><class name="com.fall2023.demousertypes.DemoClassTest"><methods><include name="addUserTypeTest"/></methods></class><class name="com.fall2023.ui.data.RandomDateGenerator"><methods><include name="demo"/></methods></class></classes></test></suite>

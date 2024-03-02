@@ -1,14 +1,16 @@
 
+import com.fall2023.ui.listener.ScreenshotListener;
 import com.fall2023.ui.pages.TexBoxPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.fall2023.ui.drivers.Driver;
 
 
-
+@Listeners(ScreenshotListener.class)
 public class TextBoxTest {
     WebDriver driver;
     TexBoxPage texBoxPage;
@@ -18,17 +20,14 @@ public class TextBoxTest {
         driver = Driver.getDriver();
         texBoxPage = new TexBoxPage();
     }
-
     @Test
     void filUpTheFormPositiveTest() throws InterruptedException {
         driver.get("https://demoqa.com/text-box");
         texBoxPage.fillUpFullName("Nurzat")
-                .fillUpEmail("Nurzat@gmail.com")
-                .fillUpCurrentAddress("Ton")
-                .fillUpPermanentAddress("Bishkek")
-                .submitBtn();
-
-
+                  .fillUpEmail("Nurzat@gmail.com")
+                  .fillUpCurrentAddress("Ton")
+                  .fillUpPermanentAddress("Bishkek")
+                  .submitBtn();
 
 //
 //        String expectedFullName = "Nurzat";

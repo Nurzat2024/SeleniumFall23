@@ -14,8 +14,6 @@ public class FrameBoxTest {
         WebElement frame1Id = driver.findElement(By.id("frame1"));
         frameHelper.switchToFrame(frame1Id);
         System.out.println(driver.findElement(By.id("sampleHeading")).getText());
-
-
-
     }
+
 }

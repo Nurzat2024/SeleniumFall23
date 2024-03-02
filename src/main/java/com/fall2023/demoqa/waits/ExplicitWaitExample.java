@@ -17,7 +17,7 @@ public class ExplicitWaitExample extends BaseTest {
      WebElement willEnableAfter5SecondBtn = WebElementManager.retrieveById("enableAfter");
 
      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7));
-     //жди до техпор до появление
+     //жди до тех пор до появление
      wait.until(ExpectedConditions.elementToBeClickable(willEnableAfter5SecondBtn)).click();
      WebElement visiableAfter5Secs = WebElementManager.retrieveById("visibleAfter");
      wait.until(ExpectedConditions.visibilityOf(visiableAfter5Secs)).click();

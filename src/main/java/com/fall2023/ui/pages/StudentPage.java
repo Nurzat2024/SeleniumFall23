@@ -1,30 +1,28 @@
 package com.fall2023.ui.pages;
 
-import com.fall2023.ui.data.RandomDateGenerator;
 import com.fall2023.ui.drivers.Driver;
 import com.fall2023.ui.helper.DropDownHelper;
 import com.fall2023.ui.helper.WebElementHelper;
 import com.github.javafaker.Faker;
-import com.google.common.io.ByteSource;
+import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.yaml.snakeyaml.tokens.Token;
 
 import java.io.File;
 import java.time.Duration;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+
 import java.util.*;
 
 public class StudentPage {
     Faker faker = new Faker();
     WebDriver driver = Driver.getDriver();
     Random randomRadioBtn = new Random();
+    WebElementHelper webElementHelper = new WebElementHelper();
+    Random random = new Random();
 
-    RandomDateGenerator randomDateGenerator = new RandomDateGenerator();
 
     public StudentPage() {
         PageFactory.initElements(Driver.getDriver(), this);
@@ -70,8 +68,6 @@ public class StudentPage {
     public WebElement closeBtn;
 
 
-    WebElementHelper webElementHelper = new WebElementHelper();
-
     public StudentPage fillUpFirstName() {
         inputFistName.sendKeys(faker.name().firstName());
         return this;
@@ -97,29 +93,10 @@ public class StudentPage {
     public StudentPage chooseGender() {
 
         List<WebElement> radioButtons = driver.findElements(By.xpath("//div[@class='custom-control custom-radio custom-control-inline']"));
-
         int randomNumber = randomRadioBtn.nextInt(3);
-        WebElementHelper webElementHelper = new WebElementHelper();
         webElementHelper.click(radioButtons.get(randomNumber));
         return this;
     }
-//    public StudentPage fillUpDateOfBirth() throws InterruptedException {
-//        int minYear = 1900;
-//        int maxYear = 2100;
-//        int randomYear = faker.random().nextInt(minYear, maxYear +1);
-//        LocalDate birthday = LocalDate.of(randomYear, 1, 1).plusDays(faker.random().nextInt(365));
-//        String formattedBirthday = DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale.ENGLISH).format(birthday);
-//
-//        dateOfBirth.clear();
-//        dateOfBirth.sendKeys(formattedBirthday);
-//        dateOfBirth.sendKeys(Keys.ENTER);
-//        dateOfBirth.sendKeys(Keys.ENTER);
-//        dateOfBirth.sendKeys(Keys.BACK_SPACE);
-//        dateOfBirth.sendKeys(Keys.BACK_SPACE);
-//        dateOfBirth.sendKeys(Keys.ENTER);
-//        return this;
-
-    //    }
     public StudentPage selectDateMonthYear(String dateMonthYear) {
         String[] dateMonthYearParts = dateMonthYear.split(" ");
         String day = dateMonthYearParts[0];
@@ -150,7 +127,6 @@ public class StudentPage {
         List<String> subjects = Arrays.asList("Ma", "Sci", "Eng", "Hi",
                 "Che", "Com", "Bio", "Ph", "Hi", "Ar", "Acc",
                 "Social Studies");
-        Faker faker = new Faker();
         for (int i = 0; i < 5; i++) {
             int randomIndex = faker.random().nextInt(subjects.size());
             String subject = subjects.get(randomIndex);
@@ -183,8 +159,7 @@ public class StudentPage {
         File directory = new File(directoryPath);
         File[] files = directory.listFiles();
 
-        Random rand = new Random();
-        File randomFile = files[rand.nextInt(files.length)];
+        File randomFile = files[random.nextInt(files.length)];
         String absolutePath = randomFile.getAbsolutePath();
         pictureBtn.sendKeys(absolutePath);
         return this;
@@ -202,9 +177,8 @@ public class StudentPage {
         stateCityMapping.put("U", Arrays.asList("A", "Lu", "Me"));
         stateCityMapping.put("Har", Arrays.asList("K", "P"));
         stateCityMapping.put("Raja", Arrays.asList("Jai", "Jaise"));
-
-        Faker faker = new Faker();
         List<String> states = Arrays.asList("N", "U", "Har", "Raja");
+
         int randomIndex = faker.random().nextInt(states.size());
         String state = states.get(randomIndex);
 

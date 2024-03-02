@@ -10,7 +10,6 @@ public class BookStoreLoginTest {
     @BeforeClass
     void setUpDriver() {
         driver = Driver.getDriver();
-        bookStoreLoginPage = new BookStoreLoginPage();
     }
     @Test
     void filUpTheBookFormRegisterPositiveTest() throws InterruptedException {

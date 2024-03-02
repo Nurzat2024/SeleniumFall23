@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.fall2023.ui.listener.ScreenshotListener"/>
+
+<!--        <listener class-name="com.fall2023.ui.listener.RetryAnnotationTransformer"/>&ndash;&gt;-->
+    </listeners>
+    <test verbose="2" preserve-order="true" name="/Users/nurzatzarylbekova/Desktop/SeleniumFall23/src/test/java/EmployeeTableTest">
+        <classes>
+            <class name="EmployeeTableTest">
+                <methods>
+                    <include name="test123"/>
+                    <include name="test124"/>
+                </methods>
+            </class>
+            <class name="DemoTest">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+

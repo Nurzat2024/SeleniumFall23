@@ -26,7 +26,6 @@ public class Driver {
                       break;
                   default:
                       throw  new IllegalArgumentException("You provided wrong Driver name");
-
             }
         }
         return driver;

@@ -1,9 +1,7 @@
 
 import com.fall2023.ui.drivers.Driver;
-import com.fall2023.ui.helper.WebElementHelper;
 import com.fall2023.ui.pages.StudentPage;
 import com.github.javafaker.Faker;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -13,7 +11,7 @@ import java.util.Locale;
 public class StudentPageTest {
     WebDriver driver;
     StudentPage studentPage;
-    WebElementHelper webElementHelper;
+
 
     @BeforeClass
     void setUpDriver() {

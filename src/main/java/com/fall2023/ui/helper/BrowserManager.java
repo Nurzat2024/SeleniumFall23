@@ -8,7 +8,7 @@ public class BrowserManager {
     public BrowserManager(WebDriver driver){
         this.driver = driver;
     }
-    public void openByNavigate(final String URL){
+    public void openByNavigate( String URL){
         driver.navigate().to(URL);
     }
     public void goBack(){

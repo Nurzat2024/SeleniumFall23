@@ -44,6 +44,7 @@ public class WindowTest {
         WebElement newWindowMess = driver.findElement(By.xpath("//button[@id='messageWindowButton']"));
         newWindowMess.click();
         Thread.sleep(2000);
+
         WindowHelper windowHelper = new WindowHelper();
         windowHelper.switchToWindow(1);
 //        String actualTestNewWindowMess = driver.findElement(By.xpath("//body[contains(text(),'Knowledge increases by sharing but not by saving. Please share this website with your friends and in your organization.')]")).getText();
